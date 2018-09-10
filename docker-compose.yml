@@ -7,7 +7,7 @@ services:
     ports:
       - 80:80
     volumes:
-      - ./nginx/conf/strapi.conf:/etc/nginx/conf.d/jenkins.marguerite.conf
+      - ./nginx/conf/marguerite/jenkins.conf:/etc/nginx/conf.d/
     links:
       - jenkins_node
     restart: always
