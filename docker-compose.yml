@@ -9,9 +9,7 @@ services:
     volumes:
       - ./nginx/conf/marguerite/:/etc/nginx/conf.d/
     networks:
-      reseaumarguerite:
-        aliases:
-          - lereverseproxyfleurit
+      - reseaumarguerite
 #     links:
 #       - jenkins_node:jenkins-marguerite
     depends_on:
@@ -40,11 +38,10 @@ services:
 #     depends_on:
 #       - strapibdd
 #    restart: always
-
     networks:
-      reseaumarguerite:
-        aliases:
-          - lejenkins
+      - reseaumarguerite:
+          aliases:
+            - lejenkins
 
 networks:
   reseaumarguerite:
