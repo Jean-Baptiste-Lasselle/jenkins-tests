@@ -19,9 +19,9 @@ services:
 #       args:
 #         - MARGUERITE_HOST=jenkins.marguerite.io
 #  docker run --name myjenkins -p 8080:8080 -p 50000:50000 --env JAVA_OPTS=-Dhudson.footerURL=http://mycompany.com jenkins
-    environment:
+#    environment:
       # - JAVA_OPTS=-Dhudson.footerURL=http://mycompany.com jenkins
-      # à tester : passer plusieurs JAVA_OPTS au démarrage de Jenkins, en mettant la valeur de JAVA_OPTS entre guillemets  
+      # à tester passer plusieurs JAVA_OPTS au démarrage de Jenkins, en mettant la valeur de JAVA_OPTS entre guillemets  
       # - JAVA_OPTS="-Dhudson.footerURL=http://mycompany.com jenkins  -Dune.autre.option.jenkins=savaleur    "
       # - MARGUERITE_HOST=jenkins.marguerite.io
     ports:
