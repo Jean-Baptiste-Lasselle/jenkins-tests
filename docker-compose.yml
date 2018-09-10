@@ -32,4 +32,4 @@ services:
       # - /usr/src/api/instance-strapi/node_modules
 #     depends_on:
 #       - strapibdd
-restart: always
+    restart: always
