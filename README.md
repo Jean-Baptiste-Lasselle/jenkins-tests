@@ -23,6 +23,15 @@ export PROVISIONING_HOME=$HOME/exp-jenkins && mkdir -p $PROVISIONING_HOME && cd 
 
 ```
 
+## Configuration
+
+### User initial
+
+```bash
+export NOM_DU_CONTEUR_JENKINS=jenkins-marguerite
+docker exec -it $NOM_DU_CONTEUR_JENKINS /bin/bash -c "cat /var/jenkins_home/secrets/initialAdminPassword"
+```
+
 # Tests réseau 
 
 
@@ -68,6 +77,8 @@ Return low-level information on Docker objects
 [jibl@pc-100 ~]$ 
 
 ```
+
+
 
 
 
