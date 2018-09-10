@@ -12,7 +12,7 @@ services:
       - jenkins_node
     restart: always
   jenkins_node:
-    container_name: jenkins.marguerite.io
+    container_name: jenkins-marguerite
     image: jenkins:2.60.3
 #    build:
 #      context: ./construction/marguerite/jenkins
