@@ -9,7 +9,7 @@ services:
     volumes:
       - ./nginx/conf/strapi.conf:/etc/nginx/conf.d/jenkins.marguerite.conf
     links:
-      - jenkins.marguerite.io
+      - jenkins_node
     restart: always
   jenkins_node:
     container_name: jenkins.marguerite.io
