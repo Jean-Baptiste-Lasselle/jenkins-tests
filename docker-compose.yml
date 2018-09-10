@@ -8,9 +8,16 @@ services:
       - 80:80
     volumes:
       - ./nginx/conf/marguerite/:/etc/nginx/conf.d/
-    links:
+    networks:
+      reseaumarguerite:
+        aliases:
+          - lereverseproxyfleurit
+#     links:
+#       - jenkins_node:jenkins-marguerite
+    depends_on:
       - jenkins_node
     restart: always
+
   jenkins_node:
     container_name: jenkins-marguerite
     image: jenkins:2.60.3
@@ -33,3 +40,12 @@ services:
 #     depends_on:
 #       - strapibdd
 #    restart: always
+
+    networks:
+      reseaumarguerite:
+        aliases:
+          - lejenkins
+
+networks:
+  reseaumarguerite:
+
